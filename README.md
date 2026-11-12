@@ -1,43 +1,100 @@
+<div align="center">
+
 # 雨夜便利店 · SoraMart
 
-雨夜街角的微缩三维便利店。可以旋转、缩放观察，也可以让角色走进店里，在货架之间行走、选购商品并模拟结账。
+雨落街角，便利店还亮着灯。
 
-[![点击观看完整展示视频](media/showcase-preview.gif)](media/SoraMart-showcase.mp4)
+一座可以旋转观察、走进店里、挑选商品的微缩三维场景。
 
-[在线体验](https://ame-mart-rain-corner.sunnybrioche.chatgpt.site/) · [完整展示视频 · 72 秒 · 约 1.8 MB](media/SoraMart-showcase.mp4)
+[观看完整视频](media/SoraMart-showcase.mp4) · [快速开始](#快速开始) · [在线场景](https://ame-mart-rain-corner.sunnybrioche.chatgpt.site/)
 
-## 本地运行
+<a href="media/SoraMart-showcase.mp4">
+  <img src="media/street-corner.jpg" alt="雨夜便利店全景，暖光橱窗映在潮湿街道上" width="800">
+</a>
 
-安装 Python 后，在仓库目录运行
+</div>
+
+## 从街角，到店里
+
+<div align="center">
+
+<a href="media/SoraMart-showcase.mp4">
+  <img src="media/scene-carousel.gif" alt="自动轮播展示街角全景、角色行走、商品查看和收银结账" width="720">
+</a>
+
+**15 秒自动轮播 · 点击画面观看完整视频**
+
+街角全景 → 走进店里 → 挑选商品 → 收银结账
+
+[完整展示 · 72 秒 · MP4 · 约 1.8 MB](media/SoraMart-showcase.mp4)
+
+</div>
+
+## 场景里的片刻
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="media/street-corner.jpg" alt="便利店街角的雨夜全景" width="380"><br>
+      <strong>在雨夜街角停一会儿</strong><br>
+      <sub>玻璃橱窗、撑伞行人、积水倒影与路灯。</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="media/walk-inside.jpg" alt="角色走进便利店，沿货架间的通道行走" width="380"><br>
+      <strong>点哪里，就走向哪里</strong><br>
+      <sub>角色沿通道行走，绕过货架，到达目的地。</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="media/choose-products.jpg" alt="角色到达货架前，查看唐扬鸡块便当及人民币价格" width="380"><br>
+      <strong>挑一份今晚的便当</strong><br>
+      <sub>近看包装、旋转商品，放进购物篮或放回货架。</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="media/checkout.jpg" alt="角色在收银台结账，购物小票显示合计金额" width="380"><br>
+      <strong>结账，再走回雨里</strong><br>
+      <sub>查看购物清单与合计，完成模拟付款后离店。</sub>
+    </td>
+  </tr>
+</table>
+
+## 快速开始
+
+1. 在店外拖拽旋转场景，滚轮或双指缩放，点击门边的「进店」立牌。
+2. 进入后点击地面，或直接点击商品、货区标识，让角色走过去。
+3. 到达货架前查看商品，选择放入购物篮或放回。
+4. 点击收银台，抵达后模拟付款，点击「带走购物袋」离店。
+
+<details>
+<summary><strong>在本地运行</strong></summary>
+
+下载仓库，安装 Python，在仓库目录运行
 
 ```sh
 python -m http.server 8000 --directory dist
 ```
 
-打开 http://localhost:8000/ 。
+在浏览器中打开 [http://localhost:8000/](http://localhost:8000/)。
 
-## 操作
+所有脚本和素材均已包含在仓库中，可以直接启动。支持 WebGL 的现代桌面或移动浏览器均可体验。
 
-- 拖拽街角模型旋转，滚轮或双指缩放。
-- 点击门边「进店」立牌，角色会穿过自动门。
-- 店内点击地面行走，点击商品、货区标识或收银台后，角色会自动绕过货架走过去。
-- 到达商品前可旋转查看，放入购物篮或放回货架。
-- 点击收银台，抵达后进行模拟付款。
-- 点击「带走购物袋」或「回到街角」，角色会走到出口。
+</details>
 
-## 文件
+<details>
+<summary><strong>项目文件与素材说明</strong></summary>
 
-- `dist/` 包含当前可运行的完整版本，所有素材均在仓库内。
-- `media/SoraMart-showcase.mp4` 为带中文字幕的展示录屏，960 × 540，约 1.8 MB。
-- `media/showcase-preview.gif` 为可在 README 中直接播放的精简动图。
-- `media/preview.jpg` 为实际场景预览。
+| 位置 | 内容 |
+| --- | --- |
+| `dist/` | 完整场景、交互脚本与本地素材 |
+| `media/scene-carousel.gif` | 适合 README 展示的自动轮播图 |
+| `media/SoraMart-showcase.mp4` | 72 秒中文字幕展示视频，960 × 540 |
+| `media/*.jpg` | 从实际场景录制中截取的展示图片 |
 
-Three.js 0.147.0 及 OrbitControls 已包含在项目中，无需安装前端依赖或构建。第三方许可见 `dist/THREE-LICENSE.txt`。
+基于 Three.js 0.147.0 和 OrbitControls。第三方许可见 [THREE-LICENSE.txt](dist/THREE-LICENSE.txt)。
 
-## 版本与素材
+食品图为 AI 生成的包装展示贴图。商品采用人民币参考价，部分鲜食价格参考成都 7-Eleven 公开商品页。结账为场景交互。展示视频使用自动操作录制。
 
-导出自当前已发布版本，原始版本提交为 `cbe37a3616939e0f9d5870d11c0c47ae44c12d4a`。
+导出自已发布版本，原始版本提交为 `cbe37a3616939e0f9d5870d11c0c47ae44c12d4a`。在线场景的访问范围由托管端控制。
 
-食品图为 AI 生成的包装展示贴图。场景采用人民币参考价，部分鲜食价格参考成都 7-Eleven 公开商品页。结账为场景交互。
-
-展示视频为自动操作录制，包含街角全景、进店、点击行走、商品查看、选购、结账和离店。
+</details>
