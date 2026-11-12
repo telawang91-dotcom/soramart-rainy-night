@@ -2,9 +2,9 @@
 
 雨夜街角的微缩三维便利店。可以旋转、缩放观察，也可以让角色走进店里，在货架之间行走、选购商品并模拟结账。
 
-![店内预览](media/preview.jpg)
+[![点击观看完整展示视频](media/showcase-preview.gif)](media/SoraMart-showcase.mp4)
 
-[在线体验](https://ame-mart-rain-corner.sunnybrioche.chatgpt.site/) · [展示视频](media/SoraMart-showcase.mp4)
+[在线体验](https://ame-mart-rain-corner.sunnybrioche.chatgpt.site/) · [完整展示视频 · 72 秒 · 约 1.8 MB](media/SoraMart-showcase.mp4)
 
 ## 本地运行
 
@@ -28,7 +28,8 @@ python -m http.server 8000 --directory dist
 ## 文件
 
 - `dist/` 包含当前可运行的完整版本，所有素材均在仓库内。
-- `media/SoraMart-showcase.mp4` 为带中文字幕的展示录屏。
+- `media/SoraMart-showcase.mp4` 为带中文字幕的展示录屏，960 × 540，约 1.8 MB。
+- `media/showcase-preview.gif` 为可在 README 中直接播放的精简动图。
 - `media/preview.jpg` 为实际场景预览。
 
 Three.js 0.147.0 及 OrbitControls 已包含在项目中，无需安装前端依赖或构建。第三方许可见 `dist/THREE-LICENSE.txt`。
